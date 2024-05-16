@@ -25,4 +25,8 @@ public class Subject {
 
     @CreatedDate
     private LocalDateTime createDate;
+
+    public Subject(String subject) {
+        this.subject = subject;
+    }
 }
