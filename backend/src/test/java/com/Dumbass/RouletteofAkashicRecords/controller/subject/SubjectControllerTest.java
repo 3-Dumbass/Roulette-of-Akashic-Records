@@ -38,4 +38,30 @@ class SubjectControllerTest extends ControllerTestSetting {
 
         response.andExpect(MockMvcResultMatchers.status().isCreated());
     }
+
+    @Test
+    void saveSubjectBlank() throws Exception {
+        String content = "   ";
+        SubjectSaveDto request = new SubjectSaveDto(content);
+        ResultActions response = mockMvc.perform(MockMvcRequestBuilders
+                .post("/api/subject/save")
+                .content(objectMapper.writeValueAsString(request))
+                .contentType(MediaType.APPLICATION_JSON)
+        );
+
+        response.andExpect(MockMvcResultMatchers.status().is4xxClientError());
+    }
+
+    @Test
+    void saveSubjectEmpty() throws Exception {
+        String content = "";
+        SubjectSaveDto request = new SubjectSaveDto(content);
+        ResultActions response = mockMvc.perform(MockMvcRequestBuilders
+                .post("/api/subject/save")
+                .content(objectMapper.writeValueAsString(request))
+                .contentType(MediaType.APPLICATION_JSON)
+        );
+
+        response.andExpect(MockMvcResultMatchers.status().is4xxClientError());
+    }
 }
