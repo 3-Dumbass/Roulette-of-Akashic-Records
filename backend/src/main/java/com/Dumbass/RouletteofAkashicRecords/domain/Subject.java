@@ -27,6 +27,9 @@ public class Subject {
     private LocalDateTime createDate;
 
     public Subject(String subject) {
+        if(subject.isBlank()){
+            throw new IllegalArgumentException("문자열이 비어있거나 공백으로만 이루어져 있습니다");
+        }
         this.subject = subject;
     }
 }
