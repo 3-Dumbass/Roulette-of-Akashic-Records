@@ -21,7 +21,7 @@ public class Subject {
     @GeneratedValue
     private Long id;
 
-    private String subject;
+    private String content;
 
     @CreatedDate
     private LocalDateTime createDate;
@@ -30,6 +30,6 @@ public class Subject {
         if(subject.isBlank()){
             throw new IllegalArgumentException("문자열이 비어있거나 공백으로만 이루어져 있습니다");
         }
-        this.subject = subject;
+        this.content = subject;
     }
 }
