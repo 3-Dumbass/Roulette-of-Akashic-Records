@@ -8,9 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.LocalDateTime;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class DbSubjectRepositoryTest extends SpringTestSetting {
+class SubjectRepositoryTest extends SpringTestSetting {
 
     @Autowired
     private SubjectRepository subjectRepository;
