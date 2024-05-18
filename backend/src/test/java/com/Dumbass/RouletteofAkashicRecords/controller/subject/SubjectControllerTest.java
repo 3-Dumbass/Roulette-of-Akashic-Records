@@ -37,7 +37,11 @@ class SubjectControllerTest extends ControllerTestSetting {
                 .contentType(MediaType.APPLICATION_JSON)
         );
 
+        String id = response.andReturn().getResponse().getContentAsString();
+        Subject subject = subjectRepository.findById(Long.parseLong(id));
+
         response.andExpect(MockMvcResultMatchers.status().isCreated());
+        Assertions.assertThat(subject.getContent()).isEqualTo(content);
     }
 
     @Test
