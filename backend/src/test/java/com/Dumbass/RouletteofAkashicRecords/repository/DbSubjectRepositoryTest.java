@@ -23,4 +23,16 @@ class DbSubjectRepositoryTest extends SpringTestSetting {
         Assertions.assertThat(subjectRepository.findById(id)).isSameAs(subject);
         Assertions.assertThat(subject.getCreateDate()).isBefore(LocalDateTime.now());
     }
+
+    @Test
+    void delete() {
+        Subject subject = new Subject("test");
+
+        Long id = subjectRepository.save(subject);
+        Assertions.assertThat(subjectRepository.findById(id)).isSameAs(subject);
+        subjectRepository.deleteById(id);
+
+        Assertions.assertThat(subjectRepository.findById(id)).isNull();
+
+    }
 }

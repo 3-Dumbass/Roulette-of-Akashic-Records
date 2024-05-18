@@ -25,6 +25,7 @@ public class DbSubjectRepository implements SubjectRepository{
 
     @Override
     public void deleteById(Long id) {
-        //TODO: 차후 개발
+        Subject del = findById(id);
+        em.remove(del);
     }
 }

@@ -18,4 +18,8 @@ public class SubjectService {
         subjectRepository.save(subject);
         return subject.getId();
     }
+
+    public void deleteSubject(Long id){
+        subjectRepository.deleteById(id);
+    }
 }
