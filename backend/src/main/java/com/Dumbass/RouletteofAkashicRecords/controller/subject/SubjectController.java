@@ -25,7 +25,7 @@ public class SubjectController {
     @Operation(summary = "주제 저장", description = "사용자가 입력란 주제를 저장")
     public ResponseEntity<Long> saveSubject(@RequestBody @Valid SubjectSaveDto subjectSaveDto){
         log.info("주제 입력: "+subjectSaveDto.getContent());
-        Long id = subjectService.saveSubject(subjectSaveDto.getContent());
+        Long id = subjectService.saveSubject(subjectSaveDto.getContent(), null);
         return new ResponseEntity<>(id, HttpStatus.CREATED);
     }
 

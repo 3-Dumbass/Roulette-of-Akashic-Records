@@ -1,9 +1,6 @@
 package com.Dumbass.RouletteofAkashicRecords.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EntityListeners;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,17 +16,23 @@ import java.time.LocalDateTime;
 public class Subject {
     @Id
     @GeneratedValue
+    @Column(name = "subject_id")
     private Long id;
 
     private String content;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id",nullable = true)//TODO: 추후 로그인 기능 완성시 수정
+    private User writer;
+
     @CreatedDate
     private LocalDateTime createDate;
 
-    public Subject(String subject) {
+    public Subject(String subject, User writer) {
         if(subject.isBlank()){
             throw new IllegalArgumentException("문자열이 비어있거나 공백으로만 이루어져 있습니다");
         }
         this.content = subject;
+        this.writer = writer;
     }
 }
