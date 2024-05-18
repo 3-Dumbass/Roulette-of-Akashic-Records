@@ -2,10 +2,9 @@ package com.Dumbass.RouletteofAkashicRecords.controller.subject;
 
 import com.Dumbass.RouletteofAkashicRecords.ControllerTestSetting;
 import com.Dumbass.RouletteofAkashicRecords.controller.subject.dto.SubjectRemoveRequest;
-import com.Dumbass.RouletteofAkashicRecords.controller.subject.dto.SubjectSaveDto;
+import com.Dumbass.RouletteofAkashicRecords.controller.subject.dto.SubjectSaveRequest;
 import com.Dumbass.RouletteofAkashicRecords.domain.Subject;
 import com.Dumbass.RouletteofAkashicRecords.repository.SubjectRepository;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -15,8 +14,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SubjectControllerTest extends ControllerTestSetting {
 
@@ -30,7 +27,7 @@ class SubjectControllerTest extends ControllerTestSetting {
     @Test
     void saveSubject() throws Exception {
         String content = "test";
-        SubjectSaveDto request = new SubjectSaveDto(content);
+        SubjectSaveRequest request = new SubjectSaveRequest(content);
         ResultActions response = mockMvc.perform(MockMvcRequestBuilders
                 .post("/api/subject/save")
                 .content(objectMapper.writeValueAsString(request))
@@ -47,7 +44,7 @@ class SubjectControllerTest extends ControllerTestSetting {
     @Test
     void saveSubjectBlank() throws Exception {
         String content = "   ";
-        SubjectSaveDto request = new SubjectSaveDto(content);
+        SubjectSaveRequest request = new SubjectSaveRequest(content);
         ResultActions response = mockMvc.perform(MockMvcRequestBuilders
                 .post("/api/subject/save")
                 .content(objectMapper.writeValueAsString(request))
@@ -60,7 +57,7 @@ class SubjectControllerTest extends ControllerTestSetting {
     @Test
     void saveSubjectEmpty() throws Exception {
         String content = "";
-        SubjectSaveDto request = new SubjectSaveDto(content);
+        SubjectSaveRequest request = new SubjectSaveRequest(content);
         ResultActions response = mockMvc.perform(MockMvcRequestBuilders
                 .post("/api/subject/save")
                 .content(objectMapper.writeValueAsString(request))

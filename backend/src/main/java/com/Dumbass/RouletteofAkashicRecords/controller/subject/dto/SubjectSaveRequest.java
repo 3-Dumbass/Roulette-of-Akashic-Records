@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class SubjectSaveDto {
+public class SubjectSaveRequest {
     @NotBlank
     private String content;
 

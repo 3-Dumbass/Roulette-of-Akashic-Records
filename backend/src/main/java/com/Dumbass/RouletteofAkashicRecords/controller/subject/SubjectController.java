@@ -1,7 +1,7 @@
 package com.Dumbass.RouletteofAkashicRecords.controller.subject;
 
 import com.Dumbass.RouletteofAkashicRecords.controller.subject.dto.SubjectRemoveRequest;
-import com.Dumbass.RouletteofAkashicRecords.controller.subject.dto.SubjectSaveDto;
+import com.Dumbass.RouletteofAkashicRecords.controller.subject.dto.SubjectSaveRequest;
 import com.Dumbass.RouletteofAkashicRecords.service.SubjectService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -23,9 +23,9 @@ public class SubjectController {
 
     @PostMapping("/save")
     @Operation(summary = "주제 저장", description = "사용자가 입력란 주제를 저장")
-    public ResponseEntity<Long> saveSubject(@RequestBody @Valid SubjectSaveDto subjectSaveDto){
-        log.info("주제 입력: "+subjectSaveDto.getContent());
-        Long id = subjectService.saveSubject(subjectSaveDto.getContent(), null);
+    public ResponseEntity<Long> saveSubject(@RequestBody @Valid SubjectSaveRequest subjectSaveRequest){
+        log.info("주제 입력: "+ subjectSaveRequest.getContent());
+        Long id = subjectService.saveSubject(subjectSaveRequest.getContent(), null);
         return new ResponseEntity<>(id, HttpStatus.CREATED);
     }
 
