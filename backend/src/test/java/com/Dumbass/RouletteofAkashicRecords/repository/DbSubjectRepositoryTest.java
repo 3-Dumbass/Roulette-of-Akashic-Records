@@ -16,7 +16,7 @@ class DbSubjectRepositoryTest extends SpringTestSetting {
     private SubjectRepository subjectRepository;
     @Test
     void save() {
-        Subject subject = new Subject("test");
+        Subject subject = new Subject("test",null);
 
         Long id = subjectRepository.save(subject);
 
@@ -26,7 +26,7 @@ class DbSubjectRepositoryTest extends SpringTestSetting {
 
     @Test
     void delete() {
-        Subject subject = new Subject("test");
+        Subject subject = new Subject("test",null);
 
         Long id = subjectRepository.save(subject);
         Assertions.assertThat(subjectRepository.findById(id)).isSameAs(subject);

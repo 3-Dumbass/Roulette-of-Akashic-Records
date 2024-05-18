@@ -73,7 +73,7 @@ class SubjectControllerTest extends ControllerTestSetting {
     @Test
     void removeSubject() throws Exception {
         String content = "test";
-        Subject subject = new Subject(content);
+        Subject subject = new Subject(content, null);
         Long id = subjectRepository.save(subject);
 
         SubjectRemoveRequest request = new SubjectRemoveRequest(id);

@@ -1,6 +1,7 @@
 package com.Dumbass.RouletteofAkashicRecords.service;
 
 import com.Dumbass.RouletteofAkashicRecords.domain.Subject;
+import com.Dumbass.RouletteofAkashicRecords.domain.User;
 import com.Dumbass.RouletteofAkashicRecords.repository.SubjectRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -13,8 +14,8 @@ public class SubjectService {
 
     private final SubjectRepository subjectRepository;
 
-    public Long saveSubject(String content){
-        Subject subject = new Subject(content);
+    public Long saveSubject(String content, User user){
+        Subject subject = new Subject(content,user);
         subjectRepository.save(subject);
         return subject.getId();
     }
