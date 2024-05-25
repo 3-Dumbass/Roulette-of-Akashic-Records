@@ -34,8 +34,10 @@ DB 명세
 - 기록 내용
 
 DB 명세
-  > 날짜 : 시간 <br>
-  > 뽑은 내용
+> 저장한 사용자: Long <br>
+> 날짜 datetime <br>
+> 주제: string <br>
+> 플랫폼: string <br>
 
 **사용자 관리**
 - 회원가입

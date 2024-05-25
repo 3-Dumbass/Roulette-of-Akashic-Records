@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Roulette-of-Akashic-Records.iml" filepath="$PROJECT_DIR$/.idea/Roulette-of-Akashic-Records.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RouletteofAkashicRecords.iml" filepath="$PROJECT_DIR$/.idea/modules/RouletteofAkashicRecords.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/RouletteofAkashicRecords.main.iml" filepath="$PROJECT_DIR$/.idea/modules/RouletteofAkashicRecords.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RouletteofAkashicRecords.test.iml" filepath="$PROJECT_DIR$/.idea/modules/RouletteofAkashicRecords.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.3Dumbass.RouletteofAkashicRecords.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.3Dumbass.RouletteofAkashicRecords.main.iml" />
     </modules>
   </component>
 </project>

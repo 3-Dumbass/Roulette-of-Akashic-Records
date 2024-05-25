@@ -11,7 +11,6 @@ public class DbSubjectRepository implements SubjectRepository{
 
     private final EntityManager em;
 
-
     @Override
     public Long save(Subject subject) {
         em.persist(subject);
