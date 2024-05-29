@@ -9,7 +9,7 @@ public interface PlatformRepository {
      * @param subject 플랫폼 객체
      * @return 플랫폼 객체의 id
      */
-    Long save(Platform subject);
+    Long save(Platform platform);
 
     /**
      * id 기반으로 플랫폼 찾기
