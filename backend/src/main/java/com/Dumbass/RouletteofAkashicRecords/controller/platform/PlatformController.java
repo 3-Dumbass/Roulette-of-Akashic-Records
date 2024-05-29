@@ -30,7 +30,7 @@ public class PlatformController {
         return new ResponseEntity<>(id, HttpStatus.CREATED);
     }
 
-    @DeleteMapping("/remove")
+    @PostMapping("/remove")
     @Operation(summary = "플랫폼 삭제", description = "사용자가 요구한 플랫폼 삭제")
     public ResponseEntity<Void> removeSubject(@RequestBody @Valid PlatformRemoveRequest platformRemoveRequest){
         log.info("플랫폼 삭제: " + platformRemoveRequest.getPlatformId());

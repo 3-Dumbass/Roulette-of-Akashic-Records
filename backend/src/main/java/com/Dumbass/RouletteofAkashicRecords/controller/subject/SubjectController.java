@@ -29,7 +29,7 @@ public class SubjectController {
         return new ResponseEntity<>(id, HttpStatus.CREATED);
     }
 
-    @DeleteMapping("/remove")
+    @PostMapping("/remove")
     @Operation(summary = "주제 삭제", description = "사용자가 요구한 주제를 삭제")
     public ResponseEntity<Void> removeSubject(@RequestBody @Valid SubjectRemoveRequest subjectRemoveRequest){
         log.info("주제 삭제: "+subjectRemoveRequest.getSubjectId());

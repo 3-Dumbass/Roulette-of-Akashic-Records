@@ -76,7 +76,7 @@ class SubjectControllerTest extends ControllerTestSetting {
         SubjectRemoveRequest request = new SubjectRemoveRequest(id);
 
         ResultActions response = mockMvc.perform(MockMvcRequestBuilders
-                .delete("/api/subject/remove")
+                .post("/api/subject/remove")
                 .content(objectMapper.writeValueAsString(request))
                 .contentType(MediaType.APPLICATION_JSON)
         );
