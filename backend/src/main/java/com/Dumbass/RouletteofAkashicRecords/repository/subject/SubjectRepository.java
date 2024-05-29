@@ -1,4 +1,4 @@
-package com.Dumbass.RouletteofAkashicRecords.repository;
+package com.Dumbass.RouletteofAkashicRecords.repository.subject;
 
 import com.Dumbass.RouletteofAkashicRecords.domain.Subject;
 
