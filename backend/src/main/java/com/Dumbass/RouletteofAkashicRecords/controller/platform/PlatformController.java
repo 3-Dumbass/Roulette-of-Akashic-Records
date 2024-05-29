@@ -3,7 +3,6 @@ package com.Dumbass.RouletteofAkashicRecords.controller.platform;
 
 import com.Dumbass.RouletteofAkashicRecords.controller.platform.dto.PlatformRemoveRequest;
 import com.Dumbass.RouletteofAkashicRecords.controller.platform.dto.PlatformSaveRequest;
-import com.Dumbass.RouletteofAkashicRecords.controller.subject.dto.SubjectRemoveRequest;
 import com.Dumbass.RouletteofAkashicRecords.service.PlatformService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
