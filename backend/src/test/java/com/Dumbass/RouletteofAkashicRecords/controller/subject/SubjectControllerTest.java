@@ -4,7 +4,7 @@ import com.Dumbass.RouletteofAkashicRecords.ControllerTestSetting;
 import com.Dumbass.RouletteofAkashicRecords.controller.subject.dto.SubjectRemoveRequest;
 import com.Dumbass.RouletteofAkashicRecords.controller.subject.dto.SubjectSaveRequest;
 import com.Dumbass.RouletteofAkashicRecords.domain.Subject;
-import com.Dumbass.RouletteofAkashicRecords.repository.SubjectRepository;
+import com.Dumbass.RouletteofAkashicRecords.repository.subject.SubjectRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;

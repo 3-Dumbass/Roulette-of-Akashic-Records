@@ -1,7 +1,8 @@
-package com.Dumbass.RouletteofAkashicRecords.repository;
+package com.Dumbass.RouletteofAkashicRecords.repository.subject;
 
 import com.Dumbass.RouletteofAkashicRecords.SpringTestSetting;
 import com.Dumbass.RouletteofAkashicRecords.domain.Subject;
+import com.Dumbass.RouletteofAkashicRecords.repository.subject.SubjectRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
