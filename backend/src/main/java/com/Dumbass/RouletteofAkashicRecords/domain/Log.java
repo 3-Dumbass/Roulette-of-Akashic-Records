@@ -1,12 +1,10 @@
 package com.Dumbass.RouletteofAkashicRecords.domain;
 
-import com.sun.jna.Platform;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.checkerframework.checker.units.qual.A;
 
 import java.time.LocalDateTime;
 
