@@ -9,7 +9,9 @@ import lombok.NoArgsConstructor;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class SubjectChoiceDto {
+public class ChoiceDto {
 
-    public String content;
+    private String subject_name;
+    private String writer;
+    private String platform;
 }

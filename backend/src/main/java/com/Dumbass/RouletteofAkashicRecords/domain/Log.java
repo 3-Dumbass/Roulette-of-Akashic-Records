@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 /**
- * user_id, log_date, content, platform_id*/
+ * user_id, log_date, content, platform_id */
 public class Log {
 
     @Id
@@ -29,7 +29,7 @@ public class Log {
     @JoinColumn(name = "content",nullable = true)
     private Subject content;
 
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "platform_id",nullable = true)
-//    private Platform platform_id;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "platform_id",nullable = true)
+    private Platform platform_id;
 }

@@ -1,9 +1,15 @@
 package com.Dumbass.RouletteofAkashicRecords.repository.log;
 
-import com.Dumbass.RouletteofAkashicRecords.controller.log.dto.LogDto;
 import com.Dumbass.RouletteofAkashicRecords.domain.Log;
+import com.Dumbass.RouletteofAkashicRecords.domain.Platform;
+import com.Dumbass.RouletteofAkashicRecords.domain.Subject;
+import com.Dumbass.RouletteofAkashicRecords.domain.User;
 
 public interface LogRepository {
 
-    void saveLog(Log log);
+    Subject findSubject(String subjectContent);
+    User findUser(String writer);
+    Platform findPlatform(String platformContent);
+
+    Boolean saveLog(Log log);
 }

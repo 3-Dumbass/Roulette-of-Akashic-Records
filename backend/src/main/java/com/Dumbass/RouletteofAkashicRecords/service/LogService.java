@@ -1,6 +1,8 @@
 package com.Dumbass.RouletteofAkashicRecords.service;
 
+import com.Dumbass.RouletteofAkashicRecords.controller.log.dto.LogRequest;
 import com.Dumbass.RouletteofAkashicRecords.domain.Log;
+import com.Dumbass.RouletteofAkashicRecords.domain.Platform;
 import com.Dumbass.RouletteofAkashicRecords.domain.Subject;
 import com.Dumbass.RouletteofAkashicRecords.domain.User;
 import com.Dumbass.RouletteofAkashicRecords.repository.log.LogRepository;
@@ -16,11 +18,17 @@ import java.time.LocalDateTime;
 public class LogService {
     private final LogRepository logRepository;
 
-    public void save(User user, Subject subject ) {
+    public Boolean save(LogRequest logRequest) {
+
+        User writer = logRepository.findUser(logRequest.getWriter());
+        Subject subjectName = logRepository.findSubject(logRequest.getSubject_name());
+        Platform platform = logRepository.findPlatform(logRequest.getPlatform());
 
         LocalDateTime currentDateTime = LocalDateTime.now();
 
-        Log log = new Log(user, currentDateTime, subject);
-        logRepository.saveLog(log);
+        Log log = new Log(writer, currentDateTime, subjectName, platform);
+
+        return logRepository.saveLog(log);
     }
+
 }

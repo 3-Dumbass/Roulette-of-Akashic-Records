@@ -1,5 +1,6 @@
 package com.Dumbass.RouletteofAkashicRecords.service;
 
+import com.Dumbass.RouletteofAkashicRecords.domain.Platform;
 import com.Dumbass.RouletteofAkashicRecords.domain.Subject;
 import com.Dumbass.RouletteofAkashicRecords.repository.choice.ChoiceRepository;
 import lombok.RequiredArgsConstructor;
@@ -16,6 +17,11 @@ public class ChoiceService {
     public Subject choiceSubject(){
 
         return choiceRepository.findSubject();
+    }
+
+    public Platform choicePlatform(){
+
+        return choiceRepository.findPlatform();
     }
 
 }
