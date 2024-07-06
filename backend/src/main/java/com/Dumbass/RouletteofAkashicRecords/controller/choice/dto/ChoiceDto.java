@@ -12,6 +12,6 @@ import lombok.NoArgsConstructor;
 public class ChoiceDto {
 
     private String subject_name;
-    private String writer;
+    private Long writer;
     private String platform;
 }

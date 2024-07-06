@@ -36,7 +36,7 @@ public class ChoiceController {
         String subject_name = subject.getContent();
 
         User user = subject.getWriter();
-        String subject_writer = user.getName();
+        Long subject_writer = user.getId();
 
         Platform platform = choiceService.choicePlatform();
         String platform_name = platform.getContent();

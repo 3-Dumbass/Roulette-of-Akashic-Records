@@ -8,7 +8,7 @@ import com.Dumbass.RouletteofAkashicRecords.domain.User;
 public interface LogRepository {
 
     Subject findSubject(String subjectContent);
-    User findUser(String writer);
+    User findUser(Long writer);
     Platform findPlatform(String platformContent);
 
     Boolean saveLog(Log log);

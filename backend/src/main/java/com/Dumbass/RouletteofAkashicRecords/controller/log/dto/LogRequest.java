@@ -9,7 +9,7 @@ import lombok.*;
 @NoArgsConstructor
 public class LogRequest {
     private String subject_name;
-    private String writer;
+    private Long writer;
     private String platform;
 
 }

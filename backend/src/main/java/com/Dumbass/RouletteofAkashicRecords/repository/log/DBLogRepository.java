@@ -27,8 +27,8 @@ public class DBLogRepository implements LogRepository {
     }
 
     @Override
-    public User findUser(String writer) {
-        TypedQuery<User> query = em.createQuery("Select u from User u where u.name = :username", User.class);
+    public User findUser(Long writer) {
+        TypedQuery<User> query = em.createQuery("Select u from User u where u.id = :username", User.class);
         query.setParameter("username", writer);
         User user = query.getSingleResult();
 
