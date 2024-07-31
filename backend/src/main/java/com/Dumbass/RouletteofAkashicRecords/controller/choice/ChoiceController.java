@@ -25,7 +25,6 @@ public class ChoiceController {
 
     private final ChoiceService choiceService;
 
-
     /** return ResponseEntity<Pair<String, String>>*/
     @PostMapping("/choice")
     @Operation(summary = "주제 뽑기", description = "랜덤으로 뽑은 주제 출력")
@@ -36,7 +35,7 @@ public class ChoiceController {
         String subject_name = subject.getContent();
 
         User user = subject.getWriter();
-        Long subject_writer = user.getId();
+        Long subject_writer = user.getIdxId();
 
         Platform platform = choiceService.choicePlatform();
         String platform_name = platform.getContent();
